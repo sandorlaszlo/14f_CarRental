@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RentalController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/rentals', [RentalController::class, 'index']);
+Route::get('/rentals/{date}', [RentalController::class, 'rentalsAfterDate']);
+Route::post('/rentals', [RentalController::class, 'store']);
