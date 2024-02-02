@@ -11,6 +11,8 @@ class Car extends Model
     use HasFactory;
     // protected $table = 'cars';
     // protected $primaryKey = 'id';
+    public $timestamps = false;
+    protected $guarded = [];
 
     /**
      * Get all of the rentals for the Car

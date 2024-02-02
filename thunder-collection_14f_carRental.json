@@ -1,0 +1,202 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "14f_carRental",
+    "dateExported": "2024-02-02T09:31:38.857Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9169e6e8-d028-41b8-95c9-057a26d75f6a",
+            "name": "Rentals",
+            "containerId": "",
+            "created": "2024-02-02T09:14:32.619Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Cars",
+            "containerId": "",
+            "created": "2024-02-02T09:14:45.419Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7f600ba8-afb9-4224-a92b-a4bf38bdd8f9",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "9169e6e8-d028-41b8-95c9-057a26d75f6a",
+            "name": "Read all rentals",
+            "url": "http://127.0.0.1:8000/api/rentals",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-02T07:40:46.888Z",
+            "modified": "2024-02-02T07:41:16.187Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "350cf609-5356-4e16-91bf-a15ff3940e2a",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Read all cars",
+            "url": "http://127.0.0.1:8000/api/cars",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-02T09:14:54.762Z",
+            "modified": "2024-02-02T09:15:52.024Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bc5c11c4-32a8-467c-a425-93f7fedfaad9",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "9169e6e8-d028-41b8-95c9-057a26d75f6a",
+            "name": "Create new rental",
+            "url": "http://127.0.0.1:8000/api/rentals",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-02T08:14:15.439Z",
+            "modified": "2024-02-02T08:29:39.951Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"carId\" : 1,\r\n  \"customerName\": \"Teszt Elek\",\r\n  \"fromDate\": \"2024.03.07\",\r\n  \"days\": 4,\r\n  \"pricePerDay\": 35000,\r\n  \"abroad\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3c038205-f192-4df5-bfd0-ec540d0fc3b2",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Search car",
+            "url": "http://127.0.0.1:8000/api/cars/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-02T09:16:03.520Z",
+            "modified": "2024-02-02T09:16:20.532Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d29eca30-7964-4b11-800b-d50077b0eb90",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "9169e6e8-d028-41b8-95c9-057a26d75f6a",
+            "name": "Rentals after date",
+            "url": "http://127.0.0.1:8000/api/rentals/2020.03.07",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-02T08:06:44.167Z",
+            "modified": "2024-02-02T08:11:26.655Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ec7b9837-f32f-440f-89be-4938a4e529f3",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Create car",
+            "url": "http://127.0.0.1:8000/api/cars",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-02T09:16:37.984Z",
+            "modified": "2024-02-02T09:19:25.470Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"licenseNumber\" : \"AB-CD-123\",\n  \"brandAndType\" : \"Opel Astra G\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2bfc1dbe-4298-47e1-a169-487e7a849ef1",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Update car",
+            "url": "http://127.0.0.1:8000/api/cars/11",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-02-02T09:20:37.488Z",
+            "modified": "2024-02-02T09:21:11.862Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"brandAndType\" : \"Opel Astra H\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b349781e-68c5-4b15-9212-b2c832359305",
+            "colId": "e99be892-2939-4ed3-a46b-cc2e374ee671",
+            "containerId": "34881f0b-b5ca-4ffa-a0b0-305255151f45",
+            "name": "Delete car",
+            "url": "http://127.0.0.1:8000/api/cars/11",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-02T09:21:39.032Z",
+            "modified": "2024-02-02T09:22:06.833Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
